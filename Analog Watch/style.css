@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Salsa;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh ;
+    background-image: linear-gradient(90deg,#6DA4AA,#FFB996);
+    color:#1D2B53;
+}
+
+.container{
+    position:relative;
+}
+
+.clock{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+    background:#fff;
+    border: 2px solid rgba(29,43,83,1);
+    box-shadow:0px 0px 30px rgba(0,0,0,0.9);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.clock span{
+    position: absolute;
+    transform:rotate(calc(30deg * var(--i)));  /* 360/12 = 30 degree */
+    inset:12px;
+    text-align: center;
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display:inline-block;
+    font-size:25px;
+}
+
+.clock::before{
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    border-radius: 50%;
+    background: #1D2B53;
+    z-index: 2;
+}
+
+.hand{
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background: var(--clr);
+    width:var(--wdth);
+    height:var(--hgt);
+    border-radius:8px;
+
+}
