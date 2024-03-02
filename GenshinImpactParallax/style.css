@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width:100%;
+    height:100%;
+}
+
+#container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img1{
+    background-image: url(/GenshinImpactParallax/assets/GenshinImpactImg1.jpg);
+}
+
+.img2{
+    background-image: url(/GenshinImpactParallax/assets/GenshinImpactImg2.jpg);
+}
+
+.img3{
+    background-image: url(/GenshinImpactParallax/assets/GenshinImpactImg3.jpg);
+}
+
+.img4{
+    background-image: url(/GenshinImpactParallax/assets/GenshinImpactImg4.jpg);
+}
+
+#parallax{
+    background-color: black;
+    width:100%;
+    height:800px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+
+#description{
+    height:150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#description h1{
+    color:#272343;
+    font-size: 40px;
+    transition:0.5s;
+}
+
+#description h1:hover{
+-webkit-text-stroke: 1px #272343;;;
+color:transparent;
+}
+
+@media only screen and (max-width: 400px) {
+    #description{
+        height:100px;
+    }
+    #description h1{
+        font-size: 20px;
+    }
+  }
